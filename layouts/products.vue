@@ -2,7 +2,7 @@
     <div>
         <header class="shadow-sm bg-white">
             <nav class="container mx-auto p-4">
-                <NuxtLink to="/products" class="font-bold">Website X Merch</NuxtLink>
+                <NuxtLink to="/" class="home-btn">Website X Merch</NuxtLink>
             </nav>
         </header>
 
@@ -28,7 +28,4 @@
 </template>
 
 <style scoped>
-.router-link-exact-active {
-    color: #12b488
-}
 </style>
