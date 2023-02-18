@@ -4,6 +4,11 @@ module.exports = {
   presets: [],
   darkMode: 'media', // or 'class'
   theme: {
+    extend:{
+      fontFamily: {
+        'brands': ['fa-brands']
+      }
+    },
     screens: {
       sm: '640px',
       md: '768px',
