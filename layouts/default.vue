@@ -4,11 +4,24 @@
             <nav class="nav-bar">
                 <a href="/" class="home-btn">Website X</a>
                 <!-- <NuxtLink to="/" class="home-btn">Website X</NuxtLink> -->
-                <ul class="flex gap-4">
-                    <li><NuxtLink to="/">Home</NuxtLink></li>
-                    <li><NuxtLink to="/about">About</NuxtLink></li>
-                    <li><NuxtLink to="/products">Products</NuxtLink></li>
-                </ul>
+                <div class="flex-row">
+                    <ul class="flex gap-8">
+                        <NuxtLink class="nav-link" to="/">About</NuxtLink>
+                        <NuxtLink class="nav-link" to="/about">Medical Checkup</NuxtLink>
+                        <NuxtLink class="nav-link" to="/products">Promo & News</NuxtLink>
+                        <div>
+                            <label>Follow us: </label>
+                            <a v-for="link in socialLinks" :key="link.name" :href="link.url" target="blank" class="mx-2">
+                                <font-awesome-icon :icon="['fa-brands', link.icon]" class="social-icons"/>
+                            </a>
+                        </div>
+                    </ul>
+                    <ul class="flex gap-8">
+                        <NuxtLink class="nav-link" to="/">Home</NuxtLink>
+                        <NuxtLink class="nav-link" to="/about">About</NuxtLink>
+                        <NuxtLink class="nav-link" to="/products">Products</NuxtLink>
+                    </ul>
+                </div>
             </nav>
         </header>
 
@@ -20,7 +33,34 @@
 </template>
 
 <style scoped>
-.router-link-exact-active {
-    @apply bg-[#12b488] text-white px-3 py-2 rounded-md text-sm;
-}
+/* .router-link-exact-active {
+    @apply text-[#12b488] rounded-md text-base;
+} */
 </style>
+
+<script setup>
+const socialLinks = [
+    {
+        name: 'Instagram',
+        url: 'https://www.instagram.com/',
+        icon: 'fa-instagram'
+
+    },
+    {
+        name: 'Facebook',
+        url: 'https://www.facebook.com/',
+        icon: 'fa-facebook'
+    },
+    {
+        name: 'Youtube',
+        url: 'https://www.youtube.com/',
+        icon: 'fa-youtube'
+    },
+    {
+        name: 'LinkedIn',
+        url: 'https://www.linkedin.com/',
+        icon: 'fa-linkedin'
+    }
+
+]
+</script>
