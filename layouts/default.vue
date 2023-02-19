@@ -10,10 +10,13 @@
                         <NuxtLink class="nav-link" to="/products">Promo & News</NuxtLink>
                         <div>
                             <label>Follow us: </label>
-                            <a v-for="link in socialLinks" :key="link.name" :href="link.url" target="blank" class="mx-4">
-                                <font-awesome-icon :icon="['fa-brands', link.icon]" class="social-icons"/>
+                            <a v-for="link in socialLinks" :key="link.name" :href="link.url" target="blank" class="mx-3">
+                                <font-awesome-icon :icon="['fa-brands', link.icon]" class="social-icons" />
                             </a>
                         </div>
+                        <a href="https://www.google.com" class="contact-us-btn" target="_blank">
+                            <font-awesome-icon icon="fa-solid fa-phone" /> Contact Us
+                        </a>
                     </ul>
                     <ul class="flex gap-12">
                         <NuxtLink class="nav-link" to="/">Home</NuxtLink>
@@ -40,28 +43,5 @@
 </style>
 
 <script setup>
-const socialLinks = [
-    {
-        name: 'Instagram',
-        url: 'https://www.instagram.com/',
-        icon: 'fa-instagram'
-
-    },
-    {
-        name: 'Facebook',
-        url: 'https://www.facebook.com/',
-        icon: 'fa-facebook'
-    },
-    {
-        name: 'Youtube',
-        url: 'https://www.youtube.com/',
-        icon: 'fa-youtube'
-    },
-    {
-        name: 'LinkedIn',
-        url: 'https://www.linkedin.com/',
-        icon: 'fa-linkedin'
-    }
-
-]
+import { socialLinks } from 'assets/constants'
 </script>
