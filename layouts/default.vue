@@ -2,7 +2,10 @@
     <div>
         <header class="shadow-sm bg-white">
             <nav class="nav-bar">
-                <a href="/" class="home-btn">Website X</a>
+                <!-- <a href="/" class="home-btn">
+                            <img :src="require('~/assets/logo.png')" role="link" @click="navigate" />
+                        </a> -->
+                <img src="~/assets/logo.png" class=""  />
                 <div class="flex-row">
                     <ul class="flex gap-12">
                         <NuxtLink class="nav-link" to="/">About</NuxtLink>
@@ -33,6 +36,9 @@
         <div class="content-container">
             <slot />
         </div>
+
+        <footer>
+        </footer>
     </div>
 </template>
 

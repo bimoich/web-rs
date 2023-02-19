@@ -7,11 +7,6 @@ body {
 }
 
 @layer base {
-  @font-face {
-    font-family: brands;
-    font-weight: 400;
-    src: url(/assets/fonts/fa-brands.ttf) format("ttf");
-  }
 }
 
 @layer components {
