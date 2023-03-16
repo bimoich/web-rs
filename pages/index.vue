@@ -1,6 +1,6 @@
 <template>
     <div>
-        <section class="section">
+        <section class="section swiper-container">
             <Swiper
                 :modules="[SwiperAutoplay, SwiperEffectCreative, SwiperNavigation]"
                 :slides-per-view="1"

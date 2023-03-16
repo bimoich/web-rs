@@ -35,4 +35,7 @@ body {
   .content-container {
     @apply container mx-auto p-4 px-48
   }
+  .swiper-container {
+    @apply -mx-48
+  }
 }
