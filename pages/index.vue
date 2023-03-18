@@ -1,95 +1,35 @@
 <template>
     <div>
-        <section class="section swiper-container">
-            <Swiper
-                :modules="[SwiperAutoplay, SwiperEffectCreative, SwiperNavigation]"
-                :slides-per-view="1"
-                :loop="true"
-                :effect="'creative'"
-                :autoplay="{
+        <section class="swiper-container">
+            <Swiper :modules="[SwiperAutoplay, SwiperEffectCreative, SwiperNavigation]" :slides-per-view="1" :loop="true"
+                :effect="'creative'" :autoplay="{
                     delay: 8000,
                     disableOnInteraction: true,
-                }"
-                :creative-effect="{
-                    prev: {
-                        shadow: false,
-                        translate: ['-20%', 0, -1],
-                    },
-                    next: {
-                        translate: ['100%', 0, 0],
-                    },
-                }"
-                :navigation="true"
-            >
+                }" :creative-effect="{
+    prev: {
+        shadow: false,
+        translate: ['-20%', 0, -1],
+    },
+    next: {
+        translate: ['100%', 0, 0],
+    },
+}" :navigation="true">
                 <SwiperSlide v-for="(imageSlider, idx) in imageSliders" :key="idx">
                     <img :src="`_nuxt/assets/img/${imageSlider}`" alt="" />
                 </SwiperSlide>
             </Swiper>
         </section>
         <section class="section">
-            <Swiper
-            :modules="[SwiperAutoplay, SwiperNavigation]"
-                :slides-per-view="3"
-                :loop="true"
-                :autoplay="{
-                    delay: 8000,
-                    disableOnInteraction: true,
-                }"
-                :navigation="true"
-            >
-                <SwiperSlide>
-                    <div class="card">
-                        <img src="~/assets/img/gasbw.png" style="width:100%">
+            <Swiper :modules="[SwiperAutoplay, SwiperNavigation]" :slides-per-view="3" :loop="true" :navigation="true">
+                <SwiperSlide v-for="(banner, idx) in banners" :key="idx" class="mx-0.5">
+                    <a :href="banner.url">
                         <div class="card-container">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, itaque dignissimos minus illum nostrum
-                                velit sequi odio molestiae culpa fuga?</p>
+                            <img :src="`_nuxt/assets/img/${banner.img}`" style="width:100%" />
+                            <div class="mx-4 -mt-2 pb-1 text-justify">
+                                <p>{{ banner.text }}</p>
+                            </div>
                         </div>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <div class="card">
-                        <img src="~/assets/img/obgynbwop.png" style="width:100%">
-                        <div class="card-container">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, itaque dignissimos minus illum nostrum
-                                velit sequi odio molestiae culpa fuga?</p>
-                        </div>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <div class="card">
-                        <img src="~/assets/img/oncologybwop.png" style="width:100%">
-                        <div class="card-container">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, itaque dignissimos minus illum nostrum
-                                velit sequi odio molestiae culpa fuga?</p>
-                        </div>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <div class="card">
-                        <img src="~/assets/img/pediatricbwop-eb05d.png" style="width:100%">
-                        <div class="card-container">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, itaque dignissimos minus illum nostrum
-                                velit sequi odio molestiae culpa fuga?</p>
-                        </div>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <div class="card">
-                        <img src="~/assets/img/pulmonologistbwop.png" style="width:100%">
-                        <div class="card-container">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, itaque dignissimos minus illum nostrum
-                                velit sequi odio molestiae culpa fuga?</p>
-                        </div>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <div class="card">
-                        <img src="~/assets/img/spinebw.png" style="width:100%">
-                        <div class="card-container">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, itaque dignissimos minus illum nostrum
-                                velit sequi odio molestiae culpa fuga?</p>
-                        </div>
-                    </div>
+                    </a>
                 </SwiperSlide>
             </Swiper>
             <div class="col-span-12 text-center my-3">
@@ -104,38 +44,32 @@
                             <img src="~/assets/img/drpada-9372d.png" style="width:70%">
                         </div>
                         <div>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, itaque dignissimos minus illum nostrum
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, itaque dignissimos minus
+                                illum nostrum
                                 velit sequi odio molestiae culpa fuga?</p>
                             <div class="col-span-12 text-center my-3">
                                 <a href="#" class="btn btn-success btn-xl btn-round text-uppercase">Tanya Sekarang</a>
                             </div>
                         </div>
-                        
+
                     </div>
                     <div>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, itaque dignissimos minus illum nostrum
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, itaque dignissimos minus illum
+                            nostrum
                             velit sequi odio molestiae culpa fuga?</p>
                         <div class="col-span-12 text-center my-3">
                             <a href="#" class="btn btn-success btn-xl btn-round text-uppercase">See More</a>
                         </div>
                     </div>
                 </div>
-                
+
             </div>
         </section>
-        <h2>Homepage</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, itaque dignissimos minus illum nostrum
-            velit sequi odio molestiae culpa fuga?</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, itaque dignissimos minus illum nostrum
-            velit sequi odio molestiae culpa fuga?</p>
     </div>
 </template>
 
 <script setup>
-const imageSliders = [
-    "Banner-MHBD-Now-Open.jpg",
-    "IGD-banner-7c9d4.png",
-]
+import { banners, imageSliders } from 'assets/constants';
 </script>
 
 <style scoped>
@@ -148,24 +82,22 @@ p {
     margin: 20px 0;
 }
 
-.section {
-    margin-bottom: 5%;
-}
-
 .card {
-  /* Add shadows to create the "card" effect */
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  transition: 0.3s;
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
 }
 
 /* On mouse-over, add a deeper shadow */
 .card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
 /* Add some padding inside the card container */
 .card-container {
-  padding: 2px 16px;
+    width: 95%;
+    margin: 12px;
+    background-color: #5bf5cc6d;
 }
 
 .btn {
@@ -197,5 +129,4 @@ p {
 .text-uppercase {
     text-transform: uppercase !important;
 }
-
 </style>
