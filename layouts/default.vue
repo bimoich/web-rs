@@ -1,7 +1,6 @@
 <template>
     <div>
         <customHeader />
-
         <!-- page content -->
         <div class="content-container">
             <slot />

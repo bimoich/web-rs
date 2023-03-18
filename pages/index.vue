@@ -43,7 +43,7 @@
                         <div>
                             <img src="~/assets/img/drpada-9372d.png" style="width:70%">
                         </div>
-                        <div>
+                        <div class="mx-4 text-justify">
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, itaque dignissimos minus
                                 illum nostrum
                                 velit sequi odio molestiae culpa fuga?</p>
@@ -51,14 +51,16 @@
                                 <a href="#" class="btn btn-success btn-xl btn-round text-uppercase">Tanya Sekarang</a>
                             </div>
                         </div>
-
                     </div>
                     <div>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, itaque dignissimos minus illum
-                            nostrum
-                            velit sequi odio molestiae culpa fuga?</p>
-                        <div class="col-span-12 text-center my-3">
-                            <a href="#" class="btn btn-success btn-xl btn-round text-uppercase">See More</a>
+                        <div class="mx-4 text-justify">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, itaque dignissimos minus
+                                illum
+                                nostrum
+                                velit sequi odio molestiae culpa fuga?</p>
+                            <div class="col-span-12 text-center my-3">
+                                <a href="#" class="btn btn-success btn-xl btn-round text-uppercase">See More</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -97,7 +99,7 @@ p {
 .card-container {
     width: 95%;
     margin: 12px;
-    background-color: #5bf5cc6d;
+    background-color: #5b7cf56d;
 }
 
 .btn {
