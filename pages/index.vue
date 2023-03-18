@@ -21,15 +21,17 @@
         </section>
         <section class="section">
             <Swiper :modules="[SwiperAutoplay, SwiperNavigation]" :slides-per-view="3" :loop="true" :navigation="true">
-                <SwiperSlide v-for="(banner, idx) in banners" :key="idx" class="mx-0.5">
-                    <a :href="banner.url">
-                        <div class="card-container">
-                            <img :src="`_nuxt/assets/img/${banner.img}`" style="width:100%" />
-                            <div class="mx-4 -mt-2 pb-1 text-justify">
-                                <p>{{ banner.text }}</p>
+                <SwiperSlide v-for="(banner, idx) in banners" :key="idx">
+                    <div class="card-container">
+                        <a :href="banner.url">
+                            <div class="bg-[#5b7cf56d]">
+                                <img :src="`_nuxt/assets/img/${banner.img}`" style="width:100%" />
+                                <div class="mx-4 -mt-2 pb-1 text-justify">
+                                    <p>{{ banner.text }}</p>
+                                </div>
                             </div>
-                        </div>
-                    </a>
+                        </a>
+                    </div>
                 </SwiperSlide>
             </Swiper>
             <div class="col-span-12 text-center my-3">
@@ -97,9 +99,8 @@ p {
 
 /* Add some padding inside the card container */
 .card-container {
-    width: 95%;
-    margin: 12px;
-    background-color: #5b7cf56d;
+    width: 100%;
+    padding: 12px;
 }
 
 .btn {
